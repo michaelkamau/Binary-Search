@@ -16,7 +16,7 @@ class BinarySearch(list):
         right = len(self) - 1
         while left <= right:
             res['count'] += 1
-            middle = (left + right) / 2
+            middle = int((left + right) / 2)
             if array[middle] < val:
                 left = middle + 1
             elif array[middle] > val:
