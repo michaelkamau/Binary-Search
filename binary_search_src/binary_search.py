@@ -5,6 +5,6 @@ class BinarySearch(list):
         :param a: length of the list to be created
         :param b: step or difference between consecutive values
         """
-        length = a
+        self.length = a
         for i in range(a):
             self.append(i+b)
