@@ -29,3 +29,20 @@ class ListComprehensionTest(unittest.TestCase):
                     self.one_to_twenty[index + 1] - self.one_to_twenty[index],
                     msg='should return 1 for consequtive numbers'
                 )
+
+    def test_medium_list(self):
+        self.assertListEqual(
+            [2, 40, 20],
+            [
+                self.two_to_forty[0],
+                self.two_to_forty[19],
+                self.two_to_forty.length
+            ],
+            msg='should create an array from 2 to 40, with intervals of 2'
+        )
+        for index, number in enumerate(self.two_to_forty):
+            if index < self.two_to_forty.length - 1:
+                self.assertEqual(
+                    2,
+                    self.two_to_forty[index + 1] - self.two_to_forty[index],
+                    msg='should return 2 for consequtive numbers')
