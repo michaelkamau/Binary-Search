@@ -46,3 +46,22 @@ class ListComprehensionTest(unittest.TestCase):
                     2,
                     self.two_to_forty[index + 1] - self.two_to_forty[index],
                     msg='should return 2 for consequtive numbers')
+
+    def test_large_list(self):
+        self.assertListEqual(
+            [10, 1000, 100],
+            [
+                self.ten_to_thousand[0],
+                self.ten_to_thousand[99],
+                self.ten_to_thousand.length
+            ],
+            msg='should create an array from 10 to 1000, with intervals of 10'
+        )
+        for index, number in enumerate(self.ten_to_thousand):
+            if index < self.ten_to_thousand.length - 1:
+                self.assertEqual(
+                    10,
+                    self.ten_to_thousand[index + 1] -
+                    self.ten_to_thousand[index],
+                    msg='should return 10 for consequtive numbers'
+                )
